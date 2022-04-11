@@ -3,34 +3,6 @@
 //if array.length % 2 === 0, return middle 2 elements
 //if array.length % 2 !== 0, return middle element
 
-const eqArrays = function(first, second) {
-  if (first.length !== second.length) {
-    return false;
-  } else {
-    let result = false;
-
-    for (let i = 0; i < first.length; i++) {
-      if (first[i] !== second[i]) {
-        result = false;
-      } else {
-        result = true;
-      }
-    }
-    return result;
-  }
-};
-
-const assertArraysEqual = function(first, second) {
-  if (eqArrays(first, second)) {
-    console.log(`🤩🤩🤩 Assertion Passed: [${first}] === [${second}]`);
-  } else {
-    console.log(`😡😵‍💫😰  Assertion Failed: [${first}] !== [${second}]`);
-  }
-};
-
-let input = ["start", "second", "middle", "secondMiddle", "fourth", 5]
-
-
 const middle = function(input) {
   if (input.length <= 2) {
     return [];
@@ -41,9 +13,8 @@ const middle = function(input) {
   if (input.length % 2 === 0) {
     return [input[input.length / 2 - 1], input[input.length / 2]] 
   }
-}
-assertArraysEqual(middle(input));
-
+};
+module.exports = middle
 
 // OLD SOLUTION
 //   const middle = function(input) {
